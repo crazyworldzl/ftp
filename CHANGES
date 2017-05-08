@@ -1,0 +1,93 @@
+Version 2.14.2 (2017/03/12)
+    * Fix permission check on android 6 and up
+Version 2.14.1 (2017/03/01)
+    * Improve about dialog
+    * Improve feedback option
+    * Updated translation for Serbian, Japanese, Spanish and Russian (thanks to multiple translators)
+    * Bug fixes
+Version 2.13.1 (2017/01/22)
+    + Add helpful message when both paid and demo are installed
+Version 2.13 (2017/01/07)
+    + Enable the ftp server to be started from Tasker/Locale
+    * Fixed bugs
+Version 2.12 (2016/04/25)
+    * Internal reorganization in build flavors
+Version 2.11.3 (2016/02/5)
+    * Updated Russian translations (thanks Sergey)
+    * Fix selection of file system root
+Version 2.11.2 (2016/01/20)
+    * Add material designed artwork (by Birgit)
+Version 2.11.1 (2016/01/09)
+    + Make widget look/work like smart icon
+    * Fix FC when no wifi connection
+    * Fix UI look material (thanks Steve)
+    * Trim apk
+Version 2.11 (2016/01/01)
+    + Added a setting to automatically connect on specific wifi networks
+    + Added a feedback menu
+    + Added a folder picker to select root of file system
+    * Updated Japanese translation (thanks naofum)
+    + Added settings action to notification
+    * Updated building toolset
+    * Fixed time formating errors (thanks j3l11234 and gmembre)
+Version 2.10.2 (2015/07/19)
+    + Serbian translation by Mladen Pejaković
+    * Fixed server not starting when usb tethering
+Version 2.10.1 (2/12/2014)
+    + Added German translation by Thomas Löwe
+    * Improved some translations
+    * Improved displaying of login info
+Version 2.10 (15/11/2014)
+    + Add REST command (implemented by MadMaverick9)
+    + Add action to notification to stop server
+    + Lots of translations improvements (Thanks DJ Mesias, Naofumi and Valerio)
+    + Artwork improvements (promotion material by Birgit)
+    + Fixes and improvements in FEAT and SITE
+    * Move to sdk 5.0 (min supported sdk 4.0)
+    * Bug fixes
+Version 2.9 (6/8/2014)
+    + Connection while tethering
+    + MFMT command extension (modify modify time)
+    + Japanese translation (Thanks Naofumi!)
+    * Bug fixes
+Version 2.8.1 (8/3/2014)
+    * Bug fixes
+    * NSD stability improvements
+Version 2.8 (7/3/2014)
+    * Default directory is now the sdcard (only works on new installs)
+    + Implement DNS_SD (adds service discovery for ftp)
+    + Implement MDTM (report date/time of files on server)
+    * Bug fixes
+Version 2.7.2 (4/1/2014)
+    * Fix clash between free and paid version
+Version 2.7.1 (31/12/2013):
+    * Add Spanish translation (thanks djMesias!)
+    * Fix FC when listing can't be sorted
+Version 2.7 (26/12/2013):
+    * Move to sdk 4.4 (min supported sdk 4.0)
+    * Improve strings
+    * Fix FC when deleting file on 4.4
+    * Added a simple widget
+Version 2.6 (30/10/2013):
+    * Support for intents (scripting, other applications)
+    * New artwork
+    * Added translations
+    * Improved performance when removing files and fixes for some small issues.
+Version 2.5.4 (25/7/2013):
+    * Bug fixes (thanks Cri!)
+Version 2.5.3 (10/05/2013):
+    * Added Russian translation by Sergey Kondakov.
+Version 2.5 (9/12/2012):
+    * Added support to transfer files using ethernet (next to wifi).
+      This needs the permission ACCESS_NETWORK_STATE to check what
+      kind of connection is used.
+Version 2.4 (1/11/2012):
+    * Fixed bugs, add link to market, remove unneeded permission: READ_PHONE_STATE.
+Version 2.3 (9/10/2012):
+    * Fixed bugs, shows ip address in notification.
+Version 2.2 (2/10/2012):
+    * Fixed bugs, hides password.
+Version 2.1 (28/06/2012):
+    * Initial release with new interface.
+Version 1.4 and before:
+    * Programming by Dave Revell.

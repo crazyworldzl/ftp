@@ -1,0 +1,69 @@
+plugins {
+    id "me.tatarka.retrolambda" version "3.5.0"
+}
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "be.ppareit.swiftp"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 21402
+        versionName "2.14.2"
+    }
+    productFlavors {
+        playstore_paid {
+            applicationId "be.ppareit.swiftp"
+        }
+        playstore_demo {
+            applicationId "be.ppareit.swiftp_free"
+        }
+        fdroid_free {
+            applicationId "be.ppareit.swiftp_free"
+        }
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            lintOptions {
+                disable 'MissingTranslation'
+            }
+        }
+    }
+    // Needed for retrolambda
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'net.vrallev.android:cat:1.0.2'
+    provided "org.projectlombok:lombok:1.16.6"
+    compile 'com.android.support:appcompat-v7:25.2.0'
+//    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.twofortyfouram:android-plugin-client-sdk-for-locale:4.0.2'
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
