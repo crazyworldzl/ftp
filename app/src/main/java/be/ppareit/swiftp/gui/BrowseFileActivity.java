@@ -1,10 +1,13 @@
 package be.ppareit.swiftp.gui;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -72,7 +75,24 @@ public class BrowseFileActivity extends AppCompatActivity {
         List<File> files = Arrays.asList(chrootDir.listFiles());
         adapter.addFiles(files);
     }
-
+    private void show(String file) {
+        try {
+            Uri uri = null;
+            if (Build.VERSION.SDK_INT >= 24) {
+                uri = FileProvider.getUriForFile(this,getPackageName()+".fileprovider",new File(file));
+            } else {
+                uri = Uri.fromFile(new File(file));
+            }
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setDataAndType(uri, "application/pdf");
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
 

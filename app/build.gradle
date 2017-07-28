@@ -16,6 +16,9 @@ android {
         versionName "2.14.2"
     }
     productFlavors {
+        release{
+
+        }
         playstore_paid {
             applicationId "be.ppareit.swiftp"
         }
